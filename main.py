@@ -7,9 +7,14 @@ client = discord.Client()
 async def on_ready():
   print("Ready!")
   auto.start()
-
+  
+@client.event
+async def on_message(message):
+  print(message)
+  
 @tasks.loop(hours=1.0)
 async def auto():
   print("I'm doing somthing every 1 hour!")
+ 
 
 client.run('TOKEN')
