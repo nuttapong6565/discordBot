@@ -14,7 +14,7 @@ async def on_message(message):
   
 @tasks.loop(hours=1.0)
 async def auto():
-  print("I'm doing something for every 1 hour!")
+  print("I'm doing something every 1 hour!")
  
 
 client.run('TOKEN')
